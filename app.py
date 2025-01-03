@@ -63,4 +63,7 @@ def logout():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Definir a porta usando a variável de ambiente 'PORT' ou 5000 por padrão
+    port = int(os.environ.get('PORT', 5000))
+    # Iniciar o servidor Flask ouvindo na porta especificada
+    app.run(host='0.0.0.0', port=port, debug=True)
