@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <nav>
+        <ul>
+
+
+            <div class="logo">Marquit</div>  <!-- Logo dentro de uma div -->
+                                
+        
+        </ul>
+    </nav>
+
+    <h1> Login</h1>
+
+    
+    <form method="POST">
+
+
+        <div class="inputs">
+        <label for="usuario">Usuário:</label>
+        <input  type="text" id="usuario" name="usuario" required><br><br>
+
+        <label for="senha">Senha:</label>
+        <input  type="password" id="senha" name="senha" required><br><br>
+        </div>
+
+        <button>
+            <span class="box">
+                ENTRAR
+            </span>
+        </button>
+    </form>
+
+    <!-- Exibe a mensagem de erro abaixo do formulário, se houver -->
+    {% if erro %}
+        <p style="color: red;">{{ erro }}</p>
+    {% endif %}
+    <!-- Exibe a mensagem de sucesso, caso o token tenha sido obtido -->
+    {% if sucesso %}
+        <p style="color: green;">{{ sucesso }}</p>
+    {% endif %}
+
+</body>
+</html>

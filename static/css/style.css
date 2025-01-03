@@ -1,0 +1,457 @@
+
+body {
+    font-family: monospace;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100%;  /* Garantir que a altura da tela seja 100% */
+    display: grid;
+    place-items: center;  /* Centraliza o conteúdo tanto vertical quanto horizontalmente */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    padding: 5%;
+    border-radius: 8px; /* Aplica o border-radius somente nas bordas inferiores */
+    width: 80%;
+    text-align: center;
+    color: #333;
+    margin: 2%;  /* Centraliza o formulário horizontalmente */
+
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;
+
+}
+
+
+
+.content-export {
+    display: grid;
+    grid-template-rows: auto auto;
+    padding: 10px;
+    width: 100%;
+
+}
+
+.content-export .label-centrocusto {
+    grid-row: 1 / 1;
+}
+
+.content-export select {
+    grid-row: 2 / 2;
+    display: block;
+    font-family: monospace;
+    width: 100%;
+    height: 40px;  /* Aumentei a altura para algo mais apropriado */
+    outline: none;
+    border: 1px solid #dadada;
+    padding: 5px;  /* Reduzi o padding para algo mais controlável */
+    border-radius: 5px;
+    background-color: #f3f7fe;
+    transition: 0.3s;
+    color: black;
+    font-size: 14px;  /* Certifique-se de que o tamanho da fonte seja adequado */
+}
+
+.content-export select:focus {
+    color: #3b82f6;
+    border: 1px solid #3b82f6;
+}
+
+
+.content-data {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    padding: 10px;
+    width: 100%;
+    
+}
+
+.label-filtro{
+    grid-row: 1 / 1;
+    grid-column: 1 / 3;
+    font-size: 30pt;
+    margin-left: 1%;
+}
+
+.label-data {
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    font-size: 18pt;
+    margin-left: 1%;
+   
+    
+}
+
+.content-data .label-data-inicial {
+    grid-row: 2 / 2;
+    grid-column: 1 / 1;
+
+}
+
+.content-data .label-data-final {
+    grid-row: 2 / 2;
+    grid-column: 2 / 2;
+    justify-self: start; /* Alinha o item à esquerda dentro do grid */
+    margin-left: 11%;
+
+}
+
+.content-data .data-inicial {
+    grid-row: 3 / 3;
+    grid-column: 1 / 1;
+
+    width: 85%;
+    
+}
+
+.content-data .data-final {
+    grid-row: 3 / 3;
+    grid-column: 2 / 2;
+    width: 85%;
+    justify-self: end; /* Alinha o item à direita dentro do grid */
+}
+
+
+
+input {
+    display: block;
+    font-family: monospace;
+    width: 100%;
+    height: 40px;  /* Aumentei a altura para algo mais apropriado */
+    padding: 0px 10px 0px;
+    outline: none;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    background-color: #f3f7fe;
+    transition: 0.3s;
+    color: black;
+  }
+  
+    input:focus {
+        color: #3b82f6;
+        border: 1px solid #3b82f6;
+    }
+
+
+
+
+
+p {
+    text-align: center;
+}
+
+
+/* INICIO BOTÃO LOGOUT */
+
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    justify-self: end; /* Alinha o item à direita dentro do grid */
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(255, 65, 65);
+    margin-left: auto; /* Adiciona margem automática à esquerda para empurrar o botão para a direita */
+    right: 2%;
+    align-self: center; /* Centraliza verticalmente dentro da ul */
+}
+
+/* plus sign */
+.sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.sign svg {
+    width: 17px;
+}
+  
+.sign svg path {
+    fill: white;
+}
+  
+/* text */
+.text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+}
+  
+/* hover effect on button width */
+.Btn:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+}
+  
+.Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 10px;
+}
+  
+/* hover effect button's text */
+.Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+  
+/* button click effect */
+.Btn:active {
+    transform: translate(2px ,2px);
+}
+
+/* FIM BOTÃO LOGOUT*/
+
+
+
+
+nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    
+
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: left; /* Centraliza os itens */
+    background-color: #333;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: #111;
+}
+
+
+main {
+    margin: 1%;
+    width: 80%;
+}
+.section-title {
+    font-size: 18pt;
+}
+
+.content p {
+
+    text-align: justify;  /* Justifica o texto */
+}
+.content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: justify;  /* Justifica as listas também */
+}
+
+
+/* FORMULARIO */
+
+/* From Uiverse.io by somshri16 */ 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .message {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 20%;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 5px;
+  }
+  
+  .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input:valid + span {
+    color: green;
+  }
+  
+  .input01 {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 5px;
+    resize: none; /* Remove a capacidade de redimensionar a textarea */
+
+  }
+  
+  .form label .input01 + span {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input01:placeholder-shown + span {
+    top: 40px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input01:focus + span,.form label .input01:valid + span {
+    top: 50px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input01:valid + span {
+    color: green;
+  }
+  
+  /* From Uiverse.io by Cornerstone-04 */ 
+.box {
+    width: 140px;
+    height: auto;
+    float: left;
+    transition: .5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    margin: 0 5px;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+  .box:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(100%);
+  }
+  
+  .box:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+  }
+  
+  .box:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    color: #111;
+
+  }
+  
+  .box:hover:before {
+    border-color: #333;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .3s;
+  }
+  
+  .box:hover:after {
+    border-color: #333;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .5s;
+  }
+  
+  button {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+ 
