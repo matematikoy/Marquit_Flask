@@ -8,6 +8,8 @@ app = Flask(__name__)
 # Defina uma chave secreta para a sessão
 app.secret_key = os.urandom(24)
 
+
+
 # Página principal (root), que redireciona para a página de login
 @app.route('/')
 def index():
